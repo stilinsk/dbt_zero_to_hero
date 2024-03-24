@@ -697,6 +697,27 @@ We will be adding exposures
  
 - No need of coding the dags as everything has been done for you you will just need to set the orchestration time and then run it
 
+
+**ORCHESTRATION APPROACH USING DAGSTER**
+
+Go one directory up from dbtlearn go back to dbt_project folder and install the `requirements.txt` folder using  `pip  install -r requirements.txt' this install dagster-dbt for us to run dagster
+ our dagster name will be dbt_dagster_project and rememebr we are still it dbt_project folder path not dbtlearn
+ 
+`dagster-dbt project scaffold --project-name dbt_dagster_project --dbt-project-dir=dbtlearn`
+
+run this command and dagster projrct should be up and running      ,then go to dbtlearn folder and  run ` dbt debug` to ensure the connection is well set. then run  `dbt deps ` to install dependencies. 
+
+ Go back to the dbt_projrct and go to dbt_dagster_project  .`cd dbt_dagster_project`.   then go to the schedulers.py and uncomment the schedules then save to enable the schedules. go back to root folder `dbt_project`. then 
+
+```
+cd dbt_dagster_project
+$env:DAGSTER_DBT_PARSE_PROJECT_ON_LOAD = 1
+dagster dev
+```
+run the above commands individually to launch the dagster project and in local host your project will be avilable there
+
+
+
  
 
 
