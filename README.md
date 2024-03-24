@@ -660,6 +660,44 @@ We will be adding exposures
 
 
 ### dbt orchestration
+ There are many ways to orchestrate data pipelines in data engineering,Dbt can integrate in many orchestration tools and thus very favourable to use as as transformation tool.we will discuss the following ways of orchestrating these data pipelines.
+ 
+ 1 **Apache Airflow**
+ 
+ - The installation can be challenging -Remember if we are not running it on cloud such as using aws to run a cluster we will then have to run it on docker.Also even after setting it to run  we have to  create the dags for our project to run smoothly.
+ 
+ - Does not really integrate with dbt it only does  the dbt run commands and  incase of fails it does not really check for  the specific models thT Hve failed thus not ideal ,however you can use  **cosmos**  to run dbt this solves this issue.
+
+2 .**Prefect**
+
+- it has simple integration 
+
+- it  is opensource
+
+3.**Azure data factory**
+
+- its really good
+
+- does not have a tight integration
+
+
+**dbt cloud**
+
+- very good and you can run the commands you wants any command thus very goood integration
+
+- it is not opensource ,it is paid for
+
+  **dagster**
+  
+- Easy to debug and to run commands
+
+- Has a great UI very user friendly and even a begginner can use it comfortably
+
+- very easy integration as you will see in the below lines of code how easy i will integrate it
+ 
+- No need of coding the dags as everything has been done for you you will just need to set the orchestration time and then run it
+
+ 
 
 
 
