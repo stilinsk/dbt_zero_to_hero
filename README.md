@@ -700,7 +700,7 @@ We will be adding exposures
 
 **ORCHESTRATION APPROACH USING DAGSTER**
 
-Go one directory up from dbtlearn go back to dbt_project folder and install the `requirements.txt` folder using  `pip  install -r requirements.txt' this install dagster-dbt for us to run dagster
+Go one directory up from dbtlearn go back to dbt_project folder and install the `requirements.txt` folder using  `pip  install -r requirements.txt` this install dagster-dbt for us to run dagster
  our dagster name will be dbt_dagster_project and rememebr we are still it dbt_project folder path not dbtlearn
  
 `dagster-dbt project scaffold --project-name dbt_dagster_project --dbt-project-dir=dbtlearn`
@@ -714,7 +714,7 @@ cd dbt_dagster_project
 $env:DAGSTER_DBT_PARSE_PROJECT_ON_LOAD = 1
 dagster dev
 ```
-run the above commands individually to launch the dagster project and in local host your project will be avilable there
+run the above commands individually to launch the dagster project and in local host your project will be available there
 
 
 
