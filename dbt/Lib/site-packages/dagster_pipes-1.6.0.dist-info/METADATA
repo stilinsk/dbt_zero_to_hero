@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: dagster-pipes
+Version: 1.6.0
+Summary: Toolkit for Dagster integrations with transform logic outside of Dagster
+Home-page: https://github.com/dagster-io/dagster/tree/master/python_modules/dagster-pipes
+Author: Dagster Labs
+Author-email: hello@dagsterlabs.com
+License: Apache-2.0
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+License-File: LICENSE
+
+Toolkit for Dagster integrations with transform logic outside of Dagster

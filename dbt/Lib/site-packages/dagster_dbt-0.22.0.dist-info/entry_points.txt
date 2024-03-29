@@ -1,0 +1,3 @@
+[console_scripts]
+dagster-dbt = dagster_dbt.cli.app:app
+dagster-dbt-cloud = dagster_dbt.cloud.cli:app
