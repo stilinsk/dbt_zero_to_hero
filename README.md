@@ -660,4 +660,86 @@ models:
 
 ```
 
+#### ORCHESTRATION
+While performing data engineering projects, such processes can be automated, and there are various factors that influence the orchestration of a particular project. You can find information on this in the following [article](https://www.linkedin.com/feed/update/urn:li:activity:7180776074341982209/), which will provide clear insights.
+
+In the following project, we will be orchestrating our workflow using Dagster. Although there are other orchestration tools available, I will also explain why we have chosen this particular tool. We will focus on some of the tools that offer this integration.
+ ##### Apache airflow
+- The installation can be challenging; to run it normally on our machine, it requires a Docker container, which can be challenging to set up.
+- If run through the cloud, it becomes very expensive. Running it on an Amazon Redshift container incurs charges that can become prohibitive, especially when keeping the Airflow instance running for different data synchronizations at various time frames.
+- Airflow does not integrate seamlessly with the dbt instance; it primarily focuses on running jobs, making it difficult to debug projects and identify errors. Thus, it is not an ideal tool to use. However, recent technological advancements have addressed this challenge, allowing integration with **Cosmos** to overcome this issue.
+- On the positive side, this tool is open source, making it easy to use.
+
+##### Prefect
+- It has a simple integration
+- it is also opensource
+
+##### Azure data factory
+- does not really have a good integration
+- its nnot open source
+
+##### dbt cloud
+- Has a very tight and good integration and you can use the commands that you want to put  and use
+- not open source its paid for
+
+
+##### DAGSTER
+- Has a very great UI and very user friendly
+- very easy to debug
+- Its opensource
+- No prior codig of jobs and tasks thuas with  jsut very fwe lines of code it is up and running
+
+
+##### dbt orchestration
+5o you have forked the repo you will need to go one directory upwards  to the dbt project folder using the follwoing command
+
+```
+cd..
+```
+You will find the `requirements.txt` file using the command  ` pip install -r requirements.txt` ,in the requirements.txt we are installing the 
+```
+dbt-snowflake
+dagster-dbt
+dagster-webserver
+
+```
+
+While still in the dbt_project folder you  execute the follwong command to start the dagster ptoject
+
+```
+dagster-dbt project scaffold --project-name dbt_dagster_project --dbt-project-dir=dbtlearn
+
+```
+You then need to to the `dbtlearn` folder and do a `dbt debug ` command to start the project.
+
+Go back to the main folder `dbt_project` folder  and then move to the new dagster project using the following command
+```
+cd dbt_dagster_project
+
+```
+You will then move to the  schedules.py` file and uncomment the schedules ,you will then save the project  and then while still in this folder file path run the following commands to start the instance of the dagster project
+
+```
+
+$env:DAGSTER_DBT_PARSE_PROJECT_ON_LOAD = 1
+dagster dev
+
+```
+![dbts](https://github.com/stilinsk/dbt_zero_to_hero/assets/113185012/52d9d206-edde-483c-8764-1aec6f2b40d4)
+
+The dagster UI will be accessible from localhost and you can move there and start orchestrating the project
+
+#### Powerbi
+After the materialization of the data models, the data is already in Snowflake. You will just need to integrate Snowflake with Power BI and load the data models. After loading, you can view the data model page, and all the connections should be connected with the dataset. If this is not the case, then you may have missed a step, and you will need to repeat the project more carefully.
+  
+![DBT1](https://github.com/stilinsk/dbt_zero_to_hero/assets/113185012/c45fc3f4-8270-476d-8bff-b0f79f9b52f3)
+
+
+ i have done some basic visaulizations,you can try to do more advanced visualizations of the project
+
+
+ All the best in this project and hope now this gives you a good basic understanding of DBT to now use it comfortbaly in the future for your own projects.
+
+ ![power](https://github.com/stilinsk/dbt_zero_to_hero/assets/113185012/342b421e-0384-4d28-bd13-fce9fcbb1fe3)
+
 
