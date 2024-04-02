@@ -738,8 +738,10 @@ After the materialization of the data models, the data is already in Snowflake. 
  i have done some basic visaulizations,you can try to do more advanced visualizations of the project
 
 
- All the best in this project and hope now this gives you a good basic understanding of DBT to now use it comfortbaly in the future for your own projects.
 
  ![power](https://github.com/stilinsk/dbt_zero_to_hero/assets/113185012/342b421e-0384-4d28-bd13-fce9fcbb1fe3)
+
+  All the best in this project and hope now this gives you a good basic understanding of DBT to now use it comfortbaly in the future for your own projects.
+
 
 
